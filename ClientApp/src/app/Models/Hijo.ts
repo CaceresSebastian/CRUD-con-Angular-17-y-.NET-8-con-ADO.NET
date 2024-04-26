@@ -1,4 +1,4 @@
-export interface Personal{
+export interface Hijo{
     IdHijo: number,
     IdPersonal: number,
     IdTipoDoc: number,
