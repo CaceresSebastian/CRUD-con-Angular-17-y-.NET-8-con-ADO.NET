@@ -1,0 +1,14 @@
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\bin\Debug\net8.0\Entity.deps.json
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\bin\Debug\net8.0\Entity.runtimeconfig.json
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\bin\Debug\net8.0\Entity.dll
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\bin\Debug\net8.0\Entity.pdb
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.csproj.AssemblyReference.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.AssemblyInfoInputs.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.AssemblyInfo.cs
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.csproj.CoreCompileInputs.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.dll
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\refint\Entity.dll
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.pdb
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\Entity.genruntimeconfig.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Entity\obj\Debug\net8.0\ref\Entity.dll

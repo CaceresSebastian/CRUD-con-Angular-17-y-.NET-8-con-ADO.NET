@@ -1,0 +1,5 @@
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\ProyectoEntrevistaLucky\SebastianCaceres\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
