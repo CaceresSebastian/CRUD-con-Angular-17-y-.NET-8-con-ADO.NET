@@ -1,1 +1,180 @@
-<p>trabajadores works!</p>
+
+<mat-card style="width: 95%;margin: 20px auto;padding: 20px;">
+    <mat-card-header>
+        <mat-card-title>
+            <p>Lista de los Trabajadores</p>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <button mat-flat-button color="primary" (click)="nuevo()">Crear Trabajador</button>
+    </mat-card-content>
+
+    <!-- Filter-->
+
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <!-- (keyup)="applyFilter($event)" -->
+            <input matInput placeholder="Ex. ium" #input>
+        </mat-form-field>
+    
+        <table mat-table [dataSource]="listaPersonal" class="mat-elevation-z3" style="margin-top: 20px;">
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Nro">
+            <th mat-header-cell *matHeaderCellDef>Nro.</th>
+            <td mat-cell *matCellDef="let element">{{element.Nro}}</td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="NombresCompletos">
+            <th mat-header-cell *matHeaderCellDef>Nombres Completos</th>
+            <td mat-cell *matCellDef="let element"> {{element.NombresCompletos}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="TDocumento">
+            <th mat-header-cell *matHeaderCellDef>T.Documento</th>
+            <td mat-cell *matCellDef="let element"> {{element.TDocumento}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="NroDocumento">
+            <th mat-header-cell *matHeaderCellDef>Nro.Documento</th>
+            <td mat-cell *matCellDef="let element"> {{element.NroDocumento}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="FNacimiento">
+            <th mat-header-cell *matHeaderCellDef>F.Nacimiento</th>
+            <td mat-cell *matCellDef="let element"> {{element.FNacimiento}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="FIngreso">
+            <th mat-header-cell *matHeaderCellDef>F.Ingreso</th>
+            <td mat-cell *matCellDef="let element"> {{element.FIngreso}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Editar">
+            <th mat-header-cell *matHeaderCellDef>Editar</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button mat-icon-button color="link" (click)="editar(element)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Eliminar">
+            <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+            <td mat-cell *matCellDef="let element">  
+                <button mat-icon-button color="warn" (click)="eliminar(element)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="VerHijos">
+            <th mat-header-cell *matHeaderCellDef>Ver Hijos</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button mat-icon-button color="primary" >
+                    <mat-icon>eye</mat-icon>
+                </button>
+            </td>
+        </ng-container>    
+    
+    
+        <!-- -->
+        <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+         <!--  -->
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+
+    <!--SCROLL-->
+
+    
+ 
+    <mat-table mat-table [dataSource]="listaPersonal" class="mat-elevation-z3"  style="margin-top: 20px;">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="Nro">
+            <th mat-header-cell *matHeaderCellDef>Nro.</th>
+            <td mat-cell *matCellDef="let element"> {{element.Nro}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="NombresCompletos">
+            <th mat-header-cell *matHeaderCellDef>Nombres Completos</th>
+            <td mat-cell *matCellDef="let element"> {{element.NombresCompletos}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="TDocumento">
+            <th mat-header-cell *matHeaderCellDef>T.Documento</th>
+            <td mat-cell *matCellDef="let element"> {{element.TDocumento}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="NroDocumento">
+            <th mat-header-cell *matHeaderCellDef>Nro.Documento</th>
+            <td mat-cell *matCellDef="let element"> {{element.NroDocumento}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="FNacimiento">
+            <th mat-header-cell *matHeaderCellDef>F.Nacimiento</th>
+            <td mat-cell *matCellDef="let element"> {{element.FNacimiento}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="FIngreso">
+            <th mat-header-cell *matHeaderCellDef>F.Ingreso</th>
+            <td mat-cell *matCellDef="let element"> {{element.FIngreso}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Editar">
+            <th mat-header-cell *matHeaderCellDef>Editar</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button mat-icon-button color="link" (click)="editar(element)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Eliminar">
+            <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+            <td mat-cell *matCellDef="let element">  
+                <button mat-icon-button color="warn" (click)="eliminar(element)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="VerHijos">
+            <th mat-header-cell *matHeaderCellDef>Ver Hijos</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button mat-icon-button color="primary" >
+                    <mat-icon>eye</mat-icon>
+                </button>
+            </td>
+        </ng-container>    
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+</mat-card>
+
+

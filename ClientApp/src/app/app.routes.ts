@@ -4,7 +4,7 @@ import { TrabajadoresComponent } from './Pages/trabajadores/trabajadores.compone
 import { HijosComponent } from './Pages/hijos/hijos.component';
 
 export const routes: Routes = [
-    {path: '', component:InicioComponent},
+    {path: '', component:TrabajadoresComponent}, //InicioComponent
     {path: 'inicio', component:InicioComponent},
     {path: 'Personal', component:TrabajadoresComponent},
     {path: 'Hijos/Lista/:id', component:HijosComponent},
