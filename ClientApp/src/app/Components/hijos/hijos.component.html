@@ -1,13 +1,13 @@
-
-<mat-card style="width: 95%;margin: 20px auto;padding: 20px;">
+<mat-card style="max-width: 1001px;margin: 20px auto;padding: 20px;">
     <mat-card-header>
         <mat-card-title>
-            <p>Lista de los Trabajadores</p>
+            <p>Lista de Hijos</p>
+            <p>De: {{nombrePadre}}</p>
         </mat-card-title>
     </mat-card-header>
 
     <mat-card-content style="margin-left: auto; margin-bottom: 20px;">
-        <button mat-flat-button color="primary" (click)="openDialogCrear()">Crear Trabajador</button>
+        <button mat-flat-button color="primary" (click)="openDialogCrear()">Crear Hijo</button>
     </mat-card-content>
 
 
@@ -17,10 +17,12 @@
     </mat-form-field>
     <mat-table mat-table [dataSource]="dataSource" class="mat-elevation-z3"  style="margin-top: 20px;">
 
+ 
+
         <!-- Position Column -->
-        <ng-container matColumnDef="idPersonal">
-            <mat-header-cell *matHeaderCellDef>Nro.</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.idPersonal}} </mat-cell>
+        <ng-container matColumnDef="idHijo">
+            <mat-header-cell class="smallColumn" *matHeaderCellDef>Nro.</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.idHijo}} </mat-cell>
         </ng-container>
 
         <!-- Name Column -->
@@ -60,14 +62,8 @@
         </ng-container>
 
         <!-- Symbol Column -->
-        <ng-container matColumnDef="fechaIngreso">
-            <mat-header-cell *matHeaderCellDef>F.Ingreso</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.fechaIngreso.split(' ')[0]}} </mat-cell>
-        </ng-container>
-
-        <!-- Symbol Column -->
         <ng-container matColumnDef="Editar">
-            <mat-header-cell *matHeaderCellDef>Editar</mat-header-cell>
+            <mat-header-cell class="smallColumn" *matHeaderCellDef>Editar</mat-header-cell>
             <mat-cell *matCellDef="let element"> 
                 <button mat-icon-button color="link" (click)="openDialogEditar(element)">
                     <mat-icon>edit</mat-icon>
@@ -77,24 +73,13 @@
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="Eliminar">
-            <mat-header-cell *matHeaderCellDef>Eliminar</mat-header-cell>
+            <mat-header-cell class="smallColumn" *matHeaderCellDef>Eliminar</mat-header-cell>
             <mat-cell *matCellDef="let element"> 
                 <button mat-icon-button color="warn" (click)="eliminar(element)">
                     <mat-icon>delete</mat-icon>
                 </button>
             </mat-cell>
         </ng-container>  
-
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="VerHijos">
-            <mat-header-cell *matHeaderCellDef>Ver Hijos</mat-header-cell>
-            <mat-cell *matCellDef="let element"> 
-                <button mat-icon-button color="primary" (click)="openDialogListaHijos(element)">
-                    <mat-icon>visibility</mat-icon>
-                </button>
-            </mat-cell>
-        </ng-container>   
-
         @if (hayDatos) {
             <!-- Row shown when there is no matching data. -->
             <tr class="mat-row" *matNoDataRow>
@@ -109,5 +94,3 @@
     }
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </mat-card>
-
-

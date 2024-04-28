@@ -23,6 +23,7 @@ export class PersonalService {
   }
 
   crear(objeto:Personal){
+    delete objeto.nombreCompleto;
     return this.http.post<RespuestaAPI>(this.apiUrl, objeto);
   }
   

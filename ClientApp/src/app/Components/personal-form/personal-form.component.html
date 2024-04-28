@@ -1,0 +1,76 @@
+<div class="mat-elevation-z3" id="contenedor-formulario">
+    <form [formGroup]="formPersonal" id="formulario">
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Primer Nombre</mat-label>
+                <input matInput formControlName="nombre1">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Segundo Nombre</mat-label>
+                <input matInput formControlName="nombre2">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Apellido Paterno</mat-label>
+                <input matInput formControlName="apPaterno">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Apellido Materno</mat-label>
+                <input matInput formControlName="apMaterno">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Tipo Documento</mat-label>
+                <mat-select matInput formControlName="idTipoDoc">
+                  <mat-option value="1">DNI</mat-option>
+                  <mat-option value="2">Carné Extrangería</mat-option>
+                  <mat-option value="3">Pasaporte</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Num. Documento</mat-label>
+                <input matInput formControlName="numeroDoc">
+            </mat-form-field>
+        </div>
+
+        <div class="container">
+            <mat-form-field class="fecha">
+                <mat-label>Fecha Nacimiento</mat-label>
+                <input matInput [matDatepicker]="picker1" formControlName="fechaNac"> 
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+        
+        <div class="flex">
+            <mat-form-field class="fecha">
+                <mat-label>Fecha Ingreso</mat-label>
+                <input matInput [matDatepicker]="picker2" formControlName="fechaIngreso"> 
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <button mat-flat-button color="primary" (click)="guardar()"> Guardar</button>
+            <button mat-flat-button color="warn" (click)="cerrarDialog()" style="margin-left: 7px;">Volver</button>
+        </div>
+    </form>
+
+</div>

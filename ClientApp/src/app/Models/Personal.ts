@@ -1,12 +1,12 @@
 export interface Personal{
-    IdPersonal: number,
-    IdTipoDoc: number,
-    NumeroDoc: string,
-    ApPaterno: string,
-    ApMaterno: string,
-    Nombre1: string,
-    Nombre2: string,
-    NombreCompleto: string,
-    FechaNac: string,
-    FechaIngreso: string,
+    idPersonal: number;
+    idTipoDoc: number;
+    numeroDoc: string;
+    apPaterno: string;
+    apMaterno: string;
+    nombre1: string;
+    nombre2: string;
+    nombreCompleto?: string;
+    fechaNac: string;
+    fechaIngreso: string;
 }

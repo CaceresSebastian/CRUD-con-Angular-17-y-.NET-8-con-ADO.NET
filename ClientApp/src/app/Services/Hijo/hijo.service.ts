@@ -23,6 +23,7 @@ export class HijoService {
   }
 
   crear(objeto:Hijo){
+    delete objeto.nombreCompleto;
     return this.http.post<RespuestaAPI>(this.apiUrl, objeto);
   }
   

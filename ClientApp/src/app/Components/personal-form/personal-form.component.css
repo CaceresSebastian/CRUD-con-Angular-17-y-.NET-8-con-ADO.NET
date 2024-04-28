@@ -1,0 +1,20 @@
+mat-form-field{
+    min-width: 247px;
+}
+
+#contenedor-formulario{
+    width: 530px; 
+    padding:30px; 
+    margin: 50px auto; 
+    display:flex; 
+    justify-content: center;
+}
+
+#formulario{
+    display: flex;
+    justify-items: stretch;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
